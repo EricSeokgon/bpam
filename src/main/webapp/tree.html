@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>Directive Example</title>
+
+<!-- <script src="http://code.angularjs.org/1.1.0/angular.min.js"
+	type="text/javascript" charset="utf-8"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script type="text/javascript" src="js/angular.treeview.js"></script>
+<link rel="stylesheet" type="text/css" href="css/angular.treeview.css">
+
+
+</head>
+<body>
+<div ng-app="myApp">
+  <div ng-controller="myController">
+      
+      <div style="display:table-row; width:500px;">
+          <div style="display:table-cell; width:250px;">
+              <div style="margin:10px 5px 30px 5px; padding:10px; background-color:#EEEEEE; border-radius:5px; font:12px Tahoma;">
+                  <span><b>First Tree's Selected Node</b> : <br>{{tree01.currentNode.roleName}}</span>
+              </div>
+          </div>
+          
+      </div>
+
+
+      <div style="display:table-row; width:500px;">
+          <div style="display:table-cell; width:250px;">
+
+              <!-- FIRST TREE -->
+              <div
+              data-angular-treeview="true"
+              data-tree-id="tree01"
+              data-tree-model="roleList1"
+              data-node-id="roleId"
+              data-node-label="roleName"
+              data-node-children="children" >
+              </div>
+          
+              
+          </div>
+
+      </div>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+

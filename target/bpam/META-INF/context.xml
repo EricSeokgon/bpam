@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+
+	<Resource auth="Container" 
+	driverClassName="oracle.jdbc.OracleDriver" 
+	name="jdbc/bpam" 
+	type="javax.sql.DataSource" 
+	url="jdbc:oracle:thin:@60.196.143.146:1521:KO16MSWIN949" 
+    username="bpam"
+    password="bpam4321"
+	 />
+	
+</Context>

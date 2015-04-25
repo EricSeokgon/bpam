@@ -1,0 +1,25 @@
+		<톰켓 jdbcrealm 설정 방법>
+		1.톰켓 lib에 ojdbc.jar 파일을 넣고
+		2. 톰켓 server.xml 파일 안에 Realm className부분을 찾은후 <!-- Oracle --> 부분을 복사해서 넣으면 됩니다.
+		
+			<!-- Use the LockOutRealm to prevent attempts to guess user passwords 
+				via a brute-force attack -->
+			<Realm className="org.apache.catalina.realm.LockOutRealm">
+				<!-- This Realm uses the UserDatabase configured in the global JNDI resources 
+					under the key "UserDatabase". Any edits that are performed against this UserDatabase 
+					are immediately available for use by the Realm. -->
+
+				<!-- Oracle -->
+				<Realm className="org.apache.catalina.realm.JDBCRealm" debug="99"
+					driverName="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@60.196.143.146:1521:KO16MSWIN949"
+					connectionName="bpam" connectionPassword="bpam4321" userTable="users"
+					userNameCol="user_name" userCredCol="user_pass" userRoleTable="user_roles"
+					roleNameCol="role_name" />
+
+				<!-- Mysql -->
+				<!-- <Realm className="org.apache.catalina.realm.JDBCRealm" driverName="org.gjt.mm.mysql.Driver" 
+					connectionURL="jdbc:mysql://dbcore.oa.to/test?user=root&amp;password=shrck1441$" 
+					userTable="users" userNameCol="user_name" userCredCol="user_pass" userRoleTable="user_roles" 
+					roleNameCol="role_name" /> -->
+
+			</Realm>

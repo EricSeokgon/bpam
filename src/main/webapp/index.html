@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">DBCORE BPAM</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#comcodereg"><i class="fa fa-codepen"></i> 공통코드등록</a></li>
+        <li><a href="#customereg"><i class="fa fa-user-plus"></i> 고객등록</a></li>
+        <li><a href="#forecatingreg"><i class="fa fa-tasks"></i> 포케스팅등록</a></li>
+        <li><a href="#contractreg"><i class="fa fa-file-text-o"></i> 계약등록</a></li>
+        <li><a href="#accountreg"><i class="fa fa-credit-card"></i> 계산서 발행</a></li>
+        <li><a href="#workreg"><i class="fa fa-stack-overflow"></i> 업무등록</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer class="text-center">
+
+  </footer>
+  
+</body>
+
+</html>

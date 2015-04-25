@@ -1,0 +1,34 @@
+<html ng-app="treeView" ng-controller="treeController">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>Directive Example</title>
+
+<!-- <script src="http://code.angularjs.org/1.1.0/angular.min.js"
+	type="text/javascript" charset="utf-8"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="js/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+<body>
+	<!--
+		[TREE attribute]
+		tree-data : the tree model on $scope (ex: "$scope.roleList" in this html file)
+		node-id : each node's id
+		node-name : each node's name
+		node-state : expand/collapse - node's default state
+
+		expand-icon, collapse-icon, child-icon : icon image file URL
+
+		** 트리 요소를 선택할 때마다 'nodeSelected' 라는 이름으로 브로드캐스트하므로,
+		** 'nodeSelected' 라는 이름으로 $on으로 브로드캐스트를 받아서 args의 
+		** selectedNode의 'node-id' 값을 통해 필요한 처리를 해줄 수 있다.
+		**
+		-->
+	<eu-tree tree-data="roleList" node-id="roleId" node-name="roleName"
+		node-state="expand" expand-icon="img/folder.png"
+		collapse-icon="img/folder-closed.png" child-icon="img/file.png"></eu-tree>
+</body>
+</html>
